@@ -4,31 +4,41 @@ import styled, {css} from 'styled-components';
 
 const Button = styled.button`
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 48px;
   padding:0 48px;
-  color:${props => props.theme.darkBlue};
+  color:${props => props.theme.primaryDark};
+  fill:${props => props.theme.primaryDark};
   font-size: 13px;
   font-style: normal;
   font-weight: bold;
   letter-spacing: 0.08em;
   text-align: center;
   text-transform: uppercase;
-  background: ${props => props.theme.lightBlue};
-  border: 1px solid ${props => props.theme.darkBlue};
+  background: ${props => props.theme.primaryLight};
+  border: 1px solid ${props => props.theme.primaryDark};
   border-radius: ${props => props.theme.borderRadiusGlobal};
   outline: none;
+  transition: all 250ms ease-in-out;
 
   &:hover{
-    background: red;
+    background:${props => props.theme.primaryMid};
+    transition: all 250ms ease-in-out;
   }
 
   ${props => props.primary && css`
-    color: white;
-    background:#2699FB;
+    color: ${props => props.theme.white};;
+    background:${props => props.theme.primaryDark};;
   `}
   ${props => props.secondary && css`
-    background:#7F7F7F;
-
+    color: ${props => props.theme.secondaryDark};
+    fill: ${props => props.theme.secondaryDark};
+    background:${props => props.theme.secondaryMid};
+    border-color: ${props => props.theme.secondaryDark};
+    &:hover{
+      background: ${props => props.theme.secondaryLight};
+    }
   `}
 `;
 

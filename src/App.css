@@ -1,3 +1,11 @@
+body,
+html{
+  background: #F1F9FF;
+  padding-top: 48px;
+  font-size: 16px;
+  line-height:24px;
+  font-family: "Helvetica", Arial, sans-serif;
+}
 .App {
   text-align: center;
 }

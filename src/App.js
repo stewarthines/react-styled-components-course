@@ -10,6 +10,7 @@ import Card from './common/Card';
 import Container from './common/LayoutContainer';
 import Row from './common/LayoutRow';
 import Column from './common/LayoutColumn';
+import GlobalStyle from './common/GlobalStyle'
 
 class App extends Component {
   state = {
@@ -25,6 +26,8 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={this.state.theme}>
+        <>
+        <GlobalStyle />
         <Container>
           <Row alignCenter colTwo>
             <Column>
@@ -70,6 +73,7 @@ class App extends Component {
           </Row>
         </Container>
 
+        </>
 
       </ThemeProvider>
     );

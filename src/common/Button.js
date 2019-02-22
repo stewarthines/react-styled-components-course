@@ -4,10 +4,10 @@ import styled, {css} from 'styled-components';
 
 const Button = styled.button`
   display: flex;
-  justify-content: center;
+  justify-content: czenter;
   align-items: center;
-  height: 48px;
-  padding:0 48px;
+  height: 36px;
+  padding:0 36px;
   color:${props => props.theme.primaryDark};
   fill:${props => props.theme.primaryDark};
   font-size: 13px;
